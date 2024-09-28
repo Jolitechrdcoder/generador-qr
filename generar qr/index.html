@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Códigos QR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Códigos QR</h1>
+        
+        <div class="input-group">
+            <input type="text" id="text-input" placeholder="Ingrese texto o URL">
+            <button class="delete-btn" onclick="clearInput()">×</button>
+        </div>
+        
+        <button onclick="generateQR()">Generar Código QR</button>
+        
+        <div class="qr-area" id="qr-area" style="display: none;">
+            <div id="qrcode"></div>
+            <button id="download-btn" onclick="downloadQR()">Descargar QR</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> MecatronicosRD. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./app.js"> </script>
+</body>
+</html>
